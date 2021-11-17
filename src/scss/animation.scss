@@ -1,0 +1,17 @@
+@keyframes gulp_animation {
+  25% {
+    transform: translateY(-10px)rotate(10deg);
+  }
+  50%{
+    transform: translateY(-25px)rotate(0deg);
+  }
+  65% {
+    transform: translateY(0px) rotate(-5deg);
+  }
+}
+
+@keyframes textpulse {
+  50% {
+    transform: scale(1.1)
+  }
+}

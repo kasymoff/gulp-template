@@ -1,0 +1,48 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+@import 'fonts';
+@import 'animation';
+
+* {
+  font-family: "MPLUSCodeLatin";
+}
+
+body {
+  background: linear-gradient(90deg, rgba(195,34,34,1) 0%, rgba(229,160,40,1) 25%, rgba(45,253,139,1) 50%, rgba(42,110,190,1) 75%, rgba(162,41,236,1) 100%);
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transform-origin: center;
+  animation: gulp_animation 3s ease-in-out infinite;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 600;
+  margin-top: 20px;
+  color: #D34A47;
+  animation: textpulse 1.5s linear infinite;
+  &:hover {
+    cursor: default;
+  }
+}
